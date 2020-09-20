@@ -20,7 +20,9 @@ namespace Comic_Book_Gallery.Controllers
         // GET: ComicBooks
         public ActionResult Index()
         {
-            return View();
+            var comicBooks = _comicBookRepository.getComicBooks();
+
+            return View(comicBooks);
         }
 
         // ovo upitnik znaci da id parametar moze biti nullable
